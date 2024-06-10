@@ -1,14 +1,15 @@
-const express=require(`express`)
-const {getLanguages}=require(`../controller/languageController`)
+const express = require(`express`)
+const { getLanguages } = require(`../controller/languageController`)
 
-const router=express.Router()
+const router = express.Router()
 
 
 
+//get all the languages
 router.
-route(`/`)
-.get(getLanguages)
+    route(`/`)
+    .get(getLanguages)
 
 
 
-module.exports=router;
+module.exports = router;

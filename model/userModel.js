@@ -1,6 +1,9 @@
 const mongoose = require(`mongoose`);
 const validator = require(`validator`);
 const bcrypt = require(`bcrypt`);
+
+
+//desiging user model schema 
 const userSchema = new mongoose.Schema({
   userName: {
     type: String,
@@ -27,16 +30,22 @@ const userSchema = new mongoose.Schema({
   bookmark_id: [{ id: { type: String, trim: true }, mediaType: { type: String, trim: true } }],
 });
 
+
+//model method for passoword hashing
 userSchema.methods.correctPassword = async function (
   candidatePassword,
   userPassword
 ) {
   return await bcrypt.compare(candidatePassword, userPassword);
 };
+
+//pre save middleware for user model
 userSchema.pre(`save`, async function (next) {
   this.password = await bcrypt.hash(this.password, 12);
   next();
 });
+
+//making a model out of the user schema
 const User = mongoose.model(`User`, userSchema);
 
 module.exports = User;
