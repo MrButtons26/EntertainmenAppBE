@@ -50,7 +50,10 @@ exports.login = async (req, res) => {
   });
   res.status(201).json({
     status: `success`,
-    token,
+    data: {
+      _id: user._id,
+      token,
+    }
   });
 };
 
