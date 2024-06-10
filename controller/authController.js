@@ -4,15 +4,16 @@ const { promisify } = require(`util`);
 exports.signUp = async (req, res) => {
   const { userName, email, password } = req.body;
   try {
-    const newUser = await User.create({ userName, email, password });
+    const query = User.create({ userName, email, password });
+    const newUser = await query;
     const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET, {
       expiresIn: "90d",
     });
     res.status(201).json({
       status: `success`,
-      token,
       data: {
-        user: newUser,
+        _id: newUser._id,
+        token,
       },
     });
   } catch (e) {

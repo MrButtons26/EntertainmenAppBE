@@ -6,7 +6,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, `username is compulsory`],
     trim: [true],
-    unique: [true, `username is already taken,Please try another`],
     maxlength: [20, `username must have less than or equal to 20 characters`],
     minlength: [5, `username must have less than or equal to 20 characters`],
     validate: [validator.isAlphanumeric, `Please enter a valid username`],
@@ -23,9 +22,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, `password is compulsory`],
     minlength: 8,
-    select: false,
+    Select: false,
   },
-  bookmark_id: [String],
+  bookmark_id: [{ id: { type: String, trim: true }, mediaType: { type: String, trim: true } }],
 });
 
 userSchema.methods.correctPassword = async function (
