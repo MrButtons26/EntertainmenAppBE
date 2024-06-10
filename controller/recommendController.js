@@ -16,7 +16,7 @@ exports.getRecommend = async (req, res) => {
                 `https://api.themoviedb.org/3/movie/${movies.at(-1).id}/recommendations?language=en-US`,
                 {
                     headers: {
-                        Authorization: process.env.Authorization,
+                        Authorization: process.env.AUTHORIZATION,
                     },
                 }
             );
@@ -27,7 +27,7 @@ exports.getRecommend = async (req, res) => {
                 `https://api.themoviedb.org/3/tv/${tv.at(-1).id}/recommendations?language=en-US`,
                 {
                     headers: {
-                        Authorization: process.env.Authorization,
+                        Authorization: process.env.AUTHORIZATION,
                     },
                 }
             );

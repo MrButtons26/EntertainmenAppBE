@@ -9,7 +9,7 @@ exports.getSearch = async (req, res) => {
         .join(`%`)}&include_adult=false&language=en-US&page=1`,
       {
         headers: {
-          Authorization: process.env.Authorization,
+          Authorization: process.env.AUTHORIZATION,
         },
       }
     );
