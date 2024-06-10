@@ -13,7 +13,7 @@ exports.getAllBookmarks = async (req, res) => {
         `https://api.themoviedb.org/3/movie/${Number(el.id)}?language=en-US`,
         {
           headers: {
-            Authorization: process.env.Authorization,
+            Authorization: process.env.AUTHORIZATION,
           },
         }
       );
@@ -25,7 +25,7 @@ exports.getAllBookmarks = async (req, res) => {
         `https://api.themoviedb.org/3/tv/${Number(el.id)}?language=en-US`,
         {
           headers: {
-            Authorization: process.env.Authorization,
+            Authorization: process.env.AUTHORIZATION,
           },
         }
       );

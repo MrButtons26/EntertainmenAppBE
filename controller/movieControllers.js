@@ -27,7 +27,7 @@ exports.topRated = async (req, res) => {
       )}`,
       {
         headers: {
-          Authorization: process.env.Authorization,
+          Authorization: process.env.AUTHORIZATION,
         },
       }
     );
@@ -46,7 +46,7 @@ exports.getMovie = async (req, res) => {
       `https://api.themoviedb.org/3/movie/${Number(id)}?language=en-US`,
       {
         headers: {
-          Authorization: process.env.Authorization,
+          Authorization: process.env.AUTHORIZATION,
         },
       }
     );
@@ -65,7 +65,7 @@ exports.getCredits = async (req, res) => {
       `https://api.themoviedb.org/3/movie/${Number(id)}/credits?language=en-US`,
       {
         headers: {
-          Authorization: process.env.Authorization,
+          Authorization: process.env.AUTHORIZATION,
         },
       }
     );
@@ -84,7 +84,7 @@ exports.getImdbId = async (req, res) => {
       `https://api.themoviedb.org/3/movie/${Number(id)}/external_ids`,
       {
         headers: {
-          Authorization: process.env.Authorization,
+          Authorization: process.env.AUTHORIZATION,
         },
       }
     );

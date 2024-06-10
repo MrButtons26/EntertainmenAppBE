@@ -6,7 +6,7 @@ exports.getLanguages = async (req, res) => {
       `https://api.themoviedb.org/3/configuration/languages`,
       {
         headers: {
-          Authorization: process.env.Authorization,
+          Authorization: process.env.AUTHORIZATION,
         },
       }
     );
