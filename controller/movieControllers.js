@@ -6,7 +6,7 @@ exports.getTrending = async (req, res) => {
       " https://api.themoviedb.org/3/trending/movie/day",
       {
         headers: {
-          Authorization: process.env.Authorization,
+          Authorization: process.env.AUTHORIZATION,
         },
       }
     );
