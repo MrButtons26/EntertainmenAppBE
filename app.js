@@ -15,6 +15,9 @@ app.use(morgan("tiny"));
 app.use(express.json());
 app.use(cors());
 
+app.get(`/`, (req, res) => {
+  res.send('hello')
+})
 app.use(`/language`, languageRouter);
 app.use(`/movies`, moviesRouter);
 app.use(`/tvshows`, tvRouter);
