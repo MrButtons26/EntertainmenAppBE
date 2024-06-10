@@ -22,6 +22,6 @@ app.use(`/search`, searchRouter);
 app.use(`/user`, userRouter);
 app.use(`/bookmarks`, bookMarksRouter);
 app.use('/recommendations', recommendRouter)
-app.listen(process.env.port, () => {
+app.listen(process.env.PORT, () => {
   console.log(`running on port:3000`);
 });
