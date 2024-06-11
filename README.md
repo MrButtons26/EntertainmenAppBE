@@ -60,6 +60,7 @@ The Entertainment App is a robust full-stack application engineered to deliver a
 - dotenv
 - cors
 - axios
+- validator
 
 ### Backend Project Structure
 
