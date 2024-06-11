@@ -20,7 +20,7 @@ The Entertainment App is a robust full-stack application engineered to deliver a
 
 ### Backend Setup
 
-1.  **Clone the Repository:** Start by cloning the Entertainment App repository to your local machine.
+1.  **Clone the Repository:** Start by cloning the EntertainmentAppBE repository to your local machine.
 
     ```sh
     git clone https://github.com/MrButtons26/EntertainmentAppBE.git
@@ -59,6 +59,7 @@ The Entertainment App is a robust full-stack application engineered to deliver a
 - Mongoose 
 - dotenv
 - cors
+- axios
 
 ### Backend Project Structure
 
@@ -98,21 +99,21 @@ The Entertainment App is a robust full-stack application engineered to deliver a
 
 ### Frontend Setup
 
-1. **Navigate to the Frontend Directory:** Move into the frontend directory of the project.
+1. **Clone the Repository:** Start by cloning the EntertainmentAppFE repository to your local machine.
 
    ```sh
+   https://github.com/MrButtons26/EntertainmentAppFE.git
    ```
+2. **Navigate to the Frontend Directory:** Move into the frontend directory of the project.
 
-2. **Install Dependencies:** Install the necessary dependencies using npm.
+   ```sh
+   cd vite-project
+   ```
+   
+3. **Install Dependencies:** Install the necessary dependencies using npm.
 
    ```sh
    npm install
-   ```
-
-3. **Configure Base Url or API end points :** This is our api endpoins, comming from backend
-
-   ```
-   const baseUrl = "Enter Your own backend api endpoints",
    ```
 
 4. **Start the Application:** Run the frontend application.
@@ -121,22 +122,20 @@ The Entertainment App is a robust full-stack application engineered to deliver a
    npm run dev
    ```
 
-5. **Access the Application:** Open your web browser and navigate to the specified URL (default: http://localhost:5173) to access the Entertainment App.
-
 ### Frontend Technologies 
 
 - Vite
-- Npm
 - HTML
 - CSS
 - Tailwind CSS
 - React.js
 - React Query
 - Javascript
-- Context API
 - React hook form
-- React Loader Spinner
-
+- React Router Dom
+- React redux toolkit
+- axios
+  
 ### Frontend Project Structure
 
 - **Assets:** Contains dummy image .
