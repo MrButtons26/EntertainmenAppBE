@@ -138,45 +138,48 @@ The Entertainment App is a robust full-stack application engineered to deliver a
   
 ### Frontend Project Structure
 
-- **Assets:** Contains dummy image .
-- **Components:** Reusable components code .
-- **Context:** State mangement accross applicaton for authenticatin & bookmark.
-- **Pages:** Five main pages, Home, Movie, Tv, Bookmark, Profile.
-- **Utils:** Contains baseUrl of api & function to fetch media
+- **public:** Images and SVG.
+- **services:** API requests to the backend .
+- **components:** Reusable components for React.
+- **Pages:** Pages for different Routes of the website.
 
 <pre>
+|-- public
+    |-- noImage.jpg
+    |-- vite.svg
+|-- services
+    |-- getAllBookmarks.js
+    |-- getAllMovies.js
+    |-- getTvShows.js
+    |-- login.js
+    |-- signUp.js
+    |-- trendingMovies.js
 |-- src
     |-- assets 
     |-- Components
-        |-- AutoScrollCarousel.jsx  
-        |-- Loader.jsx  
-        |-- Navbar2.jsx  
-        |-- NormalCard.jsx  
-        |-- Rates.jsx  
-        |-- RatingSection.jsx  
+        |-- Navbar.jsx  
         |-- SearchBar.jsx  
-        |-- SingleCard.jsx  
     |-- context
         |-- Context.jsx
         |-- State.jsx
     |-- Pages
-        |-- BookMarkHelp.jsx
-        |-- BookMarks.jsx
+        |-- Bookmark.jsx
         |-- Home.jsx
         |-- Login.jsx
         |-- MovieDisplay.jsx
         |-- Movies.jsx
-        |-- Register.jsx
+        |-- PageNotFound.jsx
         |-- SearchPage.jsx
-        |-- TvShowDisplay.jsx
-        |-- TvShows.jsx
-    |-- Stylesheets
-        |-- LoaderStyle.css
+        |-- Tv.jsx
+        |-- TvDisplay.jsx
+    |-- App.css
     |-- App.jsx 
+    |-- index.css
     |-- main.jsx 
+    |-- store.jsx
+    |-- userSlice.jsx
 |-- .eslintrc.cjs
 |--.gitignore
-|-- index.css 
 |-- index.html
 |-- package.json
 |-- package-lock.json
@@ -195,5 +198,3 @@ Contributions are welcome! Please follow these steps to contribute:
 4. Push to the branch (`git push origin feature/AmazingFeature`).
 5. Open a Pull Request.
 
-
-## Thank You 
