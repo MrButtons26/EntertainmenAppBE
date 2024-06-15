@@ -4,7 +4,7 @@ The Entertainment App is a robust full-stack application engineered to deliver a
 
 ## Deployment
 
-- **Frontend:** :- https://meek-gaufre-c77449.netlify.app/
+- **Frontend:** :- https://incredible-pastelito-ae7e7a.netlify.app
 - **Backend:** :- https://entertainmentappbe.onrender.com
 
 
